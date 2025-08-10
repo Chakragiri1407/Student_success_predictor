@@ -75,7 +75,7 @@ prediction = model.predict(input_df)
 pred_proba = model.predict_proba(input_df)
 
 # Show results
-st.subheader("Prediction")
+st.subheader("Prediction probability")
 st.markdown("**Note:** The table below shows the prediction confidence for each outcome. For example, if 'Pass' is 0.77 and 'Fail' is 0.23, the model predicts 'Pass' with 77% confidence.")
 # Get class labels from the model
 class_labels = model.classes_
@@ -85,7 +85,7 @@ proba_df = pd.DataFrame(pred_proba, columns=[f"Probability of {cls}" for cls in 
 
 st.write(proba_df)
 st.write(f"**The student will likely:** {prediction[0]}")
-st.subheader("Prediction Probability")
+
 st.write(pred_proba)
 
 # Model accuracy
