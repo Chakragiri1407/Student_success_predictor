@@ -80,8 +80,7 @@ st.markdown("**Note:** The table below shows the prediction confidence for each 
 # Get class labels from the model
 class_labels = model.classes_
 
-# Convert probabilities to a dataframe for better clarity
-proba_df = pd.DataFrame(pred_proba, columns=[f"Probability of {cls}" for cls in class_labels])
+
 
 st.write(proba_df)
 st.write(f"**The student will likely:** {prediction[0]}")
