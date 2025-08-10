@@ -83,7 +83,7 @@ class_labels = model.classes_
 # Convert probabilities to a dataframe for better clarity
 proba_df = pd.DataFrame(pred_proba, columns=[f"Probability of {cls}" for cls in class_labels])
 
-
+st.write(proba_df)
 st.write(f"**The student will likely:** {prediction[0]}")
 
 st.write(pred_proba)
